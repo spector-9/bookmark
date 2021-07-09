@@ -30,10 +30,14 @@ char* PrintSelection(Display *display, Window window, const char *bufname, const
     return string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   else 
 =======
   else // request failed, e.g. owner can't convert to the target format
 >>>>>>> bc91f40 (Initial commit)
+=======
+  else 
+>>>>>>> f020f5e (Can put dat in tsv now)
     return "";
 }
 
@@ -44,6 +48,7 @@ char* clip()
   Window window = XCreateSimpleWindow(display, DefaultRootWindow(display), 0,0, 1,1, 0, color, color);
   char *result = PrintSelection(display, window, "CLIPBOARD", "UTF8_STRING");
 <<<<<<< HEAD
+<<<<<<< HEAD
   XDestroyWindow(display, window);
   /*XCloseDisplay(display);*/
 =======
@@ -51,5 +56,9 @@ char* clip()
   XDestroyWindow(display, window);
   XCloseDisplay(display); /*problem line*/
 >>>>>>> bc91f40 (Initial commit)
+=======
+  XDestroyWindow(display, window);
+  /*XCloseDisplay(display);*/
+>>>>>>> f020f5e (Can put dat in tsv now)
   return result;
 }
