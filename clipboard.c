@@ -29,7 +29,11 @@ char* PrintSelection(Display *display, Window window, const char *bufname, const
     XFree(result);
     return string;
   }
+<<<<<<< HEAD
   else 
+=======
+  else // request failed, e.g. owner can't convert to the target format
+>>>>>>> bc91f40 (Initial commit)
     return "";
 }
 
@@ -39,7 +43,13 @@ char* clip()
   unsigned long color = BlackPixel(display, DefaultScreen(display));
   Window window = XCreateSimpleWindow(display, DefaultRootWindow(display), 0,0, 1,1, 0, color, color);
   char *result = PrintSelection(display, window, "CLIPBOARD", "UTF8_STRING");
+<<<<<<< HEAD
   XDestroyWindow(display, window);
   /*XCloseDisplay(display);*/
+=======
+/*              PrintSelection(display, window, "CLIPBOARD", "STRING");*/
+  XDestroyWindow(display, window);
+  XCloseDisplay(display); /*problem line*/
+>>>>>>> bc91f40 (Initial commit)
   return result;
 }

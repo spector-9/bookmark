@@ -1,5 +1,6 @@
 #include "clipboard.h"
 #include "stdio.h"
+<<<<<<< HEAD
 #include "string.h"
 int main()
 {
@@ -35,4 +36,11 @@ int main()
     line[strlen(line)-1] = 0;
     fprintf(file, "%s\t%s\n", line, result);
     fclose(file);
+=======
+int main()
+{
+    char* result;
+    result = clip();
+    printf("%s\n", result);
+>>>>>>> bc91f40 (Initial commit)
 }
